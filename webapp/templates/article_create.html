@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Article Create
+{% endblock title %}
+
+{% block content %}
+
+<h1>New Article</h1>
+<div class="form">
+    <form action="{% url 'article_add' %}" method="post">
+    {% include 'partial/article_form.html' with button_text='Создать' %}
+    </form>
+</div>
+
+{% endblock content %}

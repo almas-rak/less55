@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Article{% endblock title %}
+
+{% block menu %}
+<li>
+    <a href="{% url 'article_add' %}">Add Article</a>
+</li>
+<li>
+    <a href="{% url 'article_update' article.pk %}">Update Article</a>
+</li>
+<li>
+    <a href="{% url 'article_delete' article.pk %}">Delete Article</a>
+</li>
+{% endblock menu %}
+
+
+{% block content %}   
+    <p>Title: {{ article.title }}</p>
+    <p>Text: {{ article.text }}</p>
+    <p>Author: {{ article.author }}</p>
+    <p>Created_at: {{ article.created_at }}</p>
+    <p>Status: {{ article.status }}</p>
+    
+{% endblock content %}
+
+    

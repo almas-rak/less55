@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Article Update
+{% endblock title %}
+
+{% block content %}
+
+<h1>Update Article</h1>
+<div class="form">
+    <form action="{% url 'article_update' article.pk %}" method="POST">
+    {% include 'partial/article_form.html' with button_text='Сохранить' %}
+    </form>
+
+</div>
+
+{% endblock content %}
